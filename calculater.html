@@ -1,0 +1,41 @@
+<html>
+	<head>
+    		<link href="calculater.png" type="image/png" rel="icon">
+		<style>
+			.per {
+			width: 20px
+			}
+			.let {
+			width: 20px;
+			font-weight: 9px
+			
+			}
+		</style>
+		<title>calculater</title>
+	</head>
+	<body>
+		<input id="equation" type="text" placeholder= "equation">
+		<div id=answer></div>
+	</body>
+		<script type="text/javascript">
+			var answerEl = document.getElementById("answer");
+			var equationEl = document.getElementById("equation");
+			
+			equationEl.addEventListener("input", function () {
+			        var equation = equationEl.value;
+				var notAllowedRegExp = /[^0-9+\-*\/()]/;
+				if (notAllowedRegExp.test(equation)) {
+					answerEl.textContent = "Invalid symbol";
+				} else {
+					try {
+						answerEl.textContent = eval(equation);
+					} catch (e) {
+						answerEl.textContent = "error";
+					}
+				}
+			});
+			function log(answer){
+				console.log(answer)
+			}
+		</script>
+</html>
