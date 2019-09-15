@@ -1,21 +1,34 @@
 <html>
 	<head>
     		<link href="calculater.png" type="image/png" rel="icon">
-		<style>
-			.per {
-			width: 20px
-			}
-			.let {
-			width: 20px;
-			font-weight: 9px
-			
-			}
-		</style>
 		<title>calculator</title>
 	</head>
 	<body>
 		<input id="equation" type="text" placeholder= "equation">
-		<div id=answer></div>
+		<div id=answer placeholder="anwser"></div>
+		<table>
+			<tr>
+				<td><button>1</button></td>
+				<td><button>2</button></td>
+				<td><button>3</button></td>
+				<td><button>+</button></td>
+				<td><button>-</button></td>
+			</tr>
+			<tr>
+				<td><button>4</button></td>
+				<td><button>5</button></td>
+				<td><button>6</button></td>
+				<td><button>*</button></td>
+				<td><button>/</button></td>
+			</tr>
+			<tr>
+				<td><button>7</button></td>
+				<td><button>8</button></td>
+				<td><button>9</button></td>
+				<td><button>(</button></td>
+				<td><button>)</button></td>
+			</tr>
+		</table>
 	</body>
 		<script type="text/javascript">
 			var answerEl = document.getElementById("answer");
