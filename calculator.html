@@ -13,37 +13,103 @@
 		<div id=answer placeholder="anwser"></div>
 		<table>
 			<tr>
-				<td><button>1</button></td>
-				<td><button>2</button></td>
-				<td><button>3</button></td>
-				<td><button>+</button></td>
-				<td><button>-</button></td>
+				<td class = "on"><button>1</button></td>
+				<td class = "tw"><button>2</button></td>
+				<td class = "th"><button>3</button></td>
+				<td class = "plus"><button>+</button></td>
+				<td class = "min"><button>-</button></td>
 			</tr>
 			<tr>
-				<td><button>4</button></td>
-				<td><button>5</button></td>
-				<td><button>6</button></td>
-				<td><button>*</button></td>
-				<td><button>/</button></td>
+				<td class = "fo"><button>4</button></td>
+				<td class = "fv"><button>5</button></td>
+				<td class = "sx"><button>6</button></td>
+				<td class = "mult"><button>*</button></td>
+				<td class = "div"><button>/</button></td>
 			</tr>
 			<tr>
-				<td><button>7</button></td>
-				<td><button>8</button></td>
-				<td><button>9</button></td>
-				<td><button>(</button></td>
-				<td><button>)</button></td>
+				<td class = "se"><button>7</button></td>
+				<td class = "eg"><button>8</button></td>
+				<td class = "ni"><button>9</button></td>
+				<td class = "p1"><button>(</button></td>
+				<td class = "p2"><button>)</button></td>
 			</tr>
 			<tr>
-				<td class="z"><button>0</button></td>
+				<td id="z"><button>0</button></td>
 			</tr>
 		</table>
 	</body>
 		<script type="text/javascript">
+			var zEl = document.getElementById("z")
+			var p1El = document.getElementById("p1")
+			var p2El = document.getElementById("p2")
+			var niEl = document.getElementById("ni")
+			var egEl = document.getElementById("eg")
+			var diEl = document.getElementById("div")
+			var muEl = document.getElementById("mult")
+			var seE1 = document.getelementbyid("se")
+			var sxEl = document.getElementById("sx")
+			var fvEl = document.getElementById("fv")
+			var foEl = document.getElementById("fo")
+			var minEl = document.getElementById("min")
+			var puEl = document.getElementById("plus")
+			var thEl = document.getElementById("th")
+			var twEl = document.getElementById("tw")
+			var onEl = document.getElementById("on")
+			
+			zE1.addEventListener("onclick" function () {
+				equationEl.textContent == equationEl.value; ++ 0;
+			}
+			p1E1.addEventListener("onclick" function () {
+				equationEl.textContent == equationEl.value; ++ (;
+			}
+			p2E1.addEventListener("onclick" function () {
+				equationEl.textContent == equationEl.value; ++ );
+			}
+			niE1.addEventListener("onclick" function () {
+				equationEl.textContent == equationEl.value; ++ 9;
+			}
+			egE1.addEventListener("onclick" function () {
+				equationEl.textContent == equationEl.value; ++ 8;
+			}
+			diE1.addEventListener("onclick" function () {
+				equationEl.textContent == equationEl.value; ++ /;
+			}
+			muE1.addEventListener("onclick" function () {
+				equationEl.textContent == equationEl.value; ++ *;
+			}
+			seE1.addEventListener("onclick" function () {
+				equationEl.textContent == equationEl.value; ++ 7;
+			}
+			sxE1.addEventListener("onclick" function () {
+				equationEl.textContent == equationEl.value; ++ 6;
+			}
+			fvE1.addEventListener("onclick" function () {
+				equationEl.textContent == equationEl.value; ++ 5;
+			}
+			foE1.addEventListener("onclick" function () {
+				equationEl.textContent == equationEl.value; ++ 4;
+			}
+			minE1.addEventListener("onclick" function () {
+				equationEl.textContent == equationEl.value; ++ -;
+			}
+			puE1.addEventListener("onclick" function () {
+				equationEl.textContent == equationEl.value; ++ +;
+			}
+			thE1.addEventListener("onclick" function () {
+				equationEl.textContent == equationEl.value; ++ 3;
+			}
+			twE1.addEventListener("onclick" function () {
+				equationEl.textContent == equationEl.value; ++ 2;
+			}
+			onE1.addEventListener("onclick" function () {
+				equationEl.textContent == equationEl.value; ++ 1;
+			}
+				
 			var answerEl = document.getElementById("answer");
 			var equationEl = document.getElementById("equation");
 			
 			equationEl.addEventListener("input", function () {
-			        var equation = equationEl.value;
+			        var equation = 
 				var notAllowedRegExp = /[^0-9+\-*\/()]/;
 				if (notAllowedRegExp.test(equation)) {
 					answerEl.textContent = "Invalid symbol";
