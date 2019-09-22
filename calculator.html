@@ -77,55 +77,53 @@
             var equationEl = document.getElementById("equation");
             
             zEl.addEventListener("click", function () {
-                equationEl.value = equationEl.value + '0';
+                equationEl.value += '0';
             });
             p1El.addEventListener("click", function () {
-                equationEl.value = equationEl.value + '(';
+                equationEl.value += '(';
             });
             p2El.addEventListener("click", function () {
-                equationEl.value = equationEl.value + ')';
+                equationEl.value += ')';
             });
             niEl.addEventListener("click", function () {
-                equationEl.value = equationEl.value + '9';
+                equationEl.value += '9';
             });
             egEl.addEventListener("click", function () {
-                equationEl.value = equationEl.value + '8';
+                equationEl.value += '8';
             });
             diEl.addEventListener("click", function () {
-                equationEl.value = equationEl.value + '/';
+                equationEl.value += '/';
             });
             muEl.addEventListener("click", function () {
-                equationEl.value = equationEl.value + '*';
+                equationEl.value += '*';
             });
             seEl.addEventListener("click", function () {
-                equationEl.value = equationEl.value + '7';
+                equationEl.value += '7';
             });
             sxEl.addEventListener("click", function () {
-                equationEl.value = equationEl.value + '6';
+                equationEl.value += '6';
             });
             fvEl.addEventListener("click", function () {
-                equationEl.value = equationEl.value + '5';
+                equationEl.value += '5';
             });
             foEl.addEventListener("click", function () {
-                equationEl.value = equationEl.value + '4';
+                equationEl.value += '4';
             });
             minEl.addEventListener("click", function () {
-                equationEl.value = equationEl.value + '-';
+                equationEl.value += '-';
             });
             puEl.addEventListener("click", function () {
-                equationEl.value = equationEl.value + '+';
+                equationEl.value += '+';
             });
             thEl.addEventListener("click", function () {
-                equationEl.value = equationEl.value + '3';
+                equationEl.value += '3';
             });
             twEl.addEventListener("click", function () {
-                equationEl.value = equationEl.value + '2';
+                equationEl.value += '2';
             });
             onEl.addEventListener("click", function () {
-                equationEl.value = equationEl.value + '1';
+                equationEl.value += '1';
             });
-                
-
             
             equationEl.addEventListener("input", function () {
                 var equation = equationEl.value;
