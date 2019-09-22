@@ -1,128 +1,147 @@
 <html>
-	<head>
-    		<link href="calculater.png" type="image/png" rel="icon">
-		<title>calculator</title>
-		<style>
-			.z {
-				length: 70px;
-			}
-		</style>
-	</head>
-	<body>
-		<input id="equation" type="text" placeholder= "equation">
-		<div id="answer"></div>
-		<table>
-			<tr>
-				<td id="on"><button>1</button></td>
-				<td id="tw"><button>2</button></td>
-				<td id="th"><button>3</button></td>
-				<td id="plus"><button>+</button></td>
-				<td id="min"><button>-</button></td>
-			</tr>
-			<tr>
-				<td id="fo"><button>4</button></td>
-				<td id="fv"><button>5</button></td>
-				<td id="sx"><button>6</button></td>
-				<td id="mult"><button>*</button></td>
-				<td id="div"><button>/</button></td>
-			</tr>
-			<tr>
-				<td id="se"><button>7</button></td>
-				<td id="eg"><button>8</button></td>
-				<td id="ni"><button>9</button></td>
-				<td id="p1"><button>(</button></td>
-				<td id="p2"><button>)</button></td>
-			</tr>
-			<tr>
-				<td id="z"><button>0</button></td>
-			</tr>
-		</table>
-	</body>
-		<script type="text/javascript">
-			var zEl = document.getElementById("z")
-			var p1El = document.getElementById("p1")
-			var p2El = document.getElementById("p2")
-			var niEl = document.getElementById("ni")
-			var egEl = document.getElementById("eg")
-			var diEl = document.getElementById("div")
-			var muEl = document.getElementById("mult")
-			var seE1 = document.getelementbyid("se")
-			var sxEl = document.getElementById("sx")
-			var fvEl = document.getElementById("fv")
-			var foEl = document.getElementById("fo")
-			var minEl = document.getElementById("min")
-			var puEl = document.getElementById("plus")
-			var thEl = document.getElementById("th")
-			var twEl = document.getElementById("tw")
-			var onEl = document.getElementById("on")
-			
-			zE1.addEventListener("onclick" function () {
-				equationEl.textContent == equationEl.value; ++ 0;
-			}
-			p1E1.addEventListener("onclick" function () {
-				equationEl.textContent == equationEl.value; ++ (;
-			}
-			p2E1.addEventListener("onclick" function () {
-				equationEl.textContent == equationEl.value; ++ );
-			}
-			niE1.addEventListener("onclick" function () {
-				equationEl.textContent == equationEl.value; ++ 9;
-			}
-			egE1.addEventListener("onclick" function () {
-				equationEl.textContent == equationEl.value; ++ 8;
-			}
-			diE1.addEventListener("onclick" function () {
-				equationEl.textContent == equationEl.value; ++ /;
-			}
-			muE1.addEventListener("onclick" function () {
-				equationEl.textContent == equationEl.value; ++ *;
-			}
-			seE1.addEventListener("onclick" function () {
-				equationEl.textContent == equationEl.value; ++ 7;
-			}
-			sxE1.addEventListener("onclick" function () {
-				equationEl.textContent == equationEl.value; ++ 6;
-			}
-			fvE1.addEventListener("onclick" function () {
-				equationEl.textContent == equationEl.value; ++ 5;
-			}
-			foE1.addEventListener("onclick" function () {
-				equationEl.textContent == equationEl.value; ++ 4;
-			}
-			minE1.addEventListener("onclick" function () {
-				equationEl.textContent == equationEl.value; ++ -;
-			}
-			puE1.addEventListener("onclick" function () {
-				equationEl.textContent == equationEl.value; ++ +;
-			}
-			thE1.addEventListener("onclick" function () {
-				equationEl.textContent == equationEl.value; ++ 3;
-			}
-			twE1.addEventListener("onclick" function () {
-				equationEl.textContent == equationEl.value; ++ 2;
-			}
-			onE1.addEventListener("onclick" function () {
-				equationEl.textContent == equationEl.value; ++ 1;
-			}
-				
-			var answerEl = document.getElementById("answer");
-			var equationEl = document.getElementById("equation");
-			
-			equationEl.addEventListener("input", function () {
-			        var equation = 
-				var notAllowedRegExp = /[^0-9+\-*\/()]/;
-				if (notAllowedRegExp.test(equation)) {
-					answerEl.textContent = "Invalid symbol";
-				} else {
-					try {
-						answerEl.textContent = eval(equation);
-					} catch (e) {
-						answerEl.textContent = "error";
-					}
-				}
-			});
-			function log(answer){
-				console.log(answer)
-			}
-		</script>
+    <head>
+        <link href="calculater.png" type="image/png" rel="icon">
+        <title>calculator</title>
+        <style>
+            button {
+                width: 100px;
+                height: 100px;
+                font-size: 80px;                   
+             }
+             #equation {
+                     width: 518px;
+                    font-size: 70px;
+                    border-bottom: none;
+                    border-right: solid 1px;
+             }
+             .answer {
+             width: 516px;
+             height: 70px;
+             border: 1px solid;
+             border-top: none;
+             font-size: 70px;
+}
+
+             }
+        </style>
+    </head>
+    <body>
+        <input id="equation" type="text" placeholder= "equation">
+        <div id="answer" class="answer"></div>
+        <table>
+            <tr>
+                <td id="on"><button>1</button></td>
+                <td id="tw"><button>2</button></td>
+                <td id="th"><button>3</button></td>
+                <td id="plus"><button>+</button></td>
+                <td id="min"><button>-</button></td>
+            </tr>
+            <tr>
+                <td id="fo"><button>4</button></td>
+                <td id="fv"><button>5</button></td>
+                <td id="sx"><button>6</button></td>
+                <td id="mult"><button>*</button></td>
+                <td id="div"><button>/</button></td>
+            </tr>
+            <tr>
+                <td id="se"><button>7</button></td>
+                <td id="eg"><button>8</button></td>
+                <td id="ni"><button>9</button></td>
+                <td id="p1"><button>(</button></td>
+                <td id="p2"><button>)</button></td>
+            </tr>
+            <tr>
+                <td id="z"><button>0</button></td>
+            </tr>
+        </table>
+    </body>
+        <script type="text/javascript">
+            var zEl = document.getElementById("z")
+            var p1El = document.getElementById("p1")
+            var p2El = document.getElementById("p2")
+            var niEl = document.getElementById("ni")
+            var egEl = document.getElementById("eg")
+            var diEl = document.getElementById("div")
+            var muEl = document.getElementById("mult")
+            var seEl = document.getElementById("se")
+            var sxEl = document.getElementById("sx")
+            var fvEl = document.getElementById("fv")
+            var foEl = document.getElementById("fo")
+            var minEl = document.getElementById("min")
+            var puEl = document.getElementById("plus")
+            var thEl = document.getElementById("th")
+            var twEl = document.getElementById("tw")
+            var onEl = document.getElementById("on")
+            
+            var answerEl = document.getElementById("answer");
+            var equationEl = document.getElementById("equation");
+            
+            zEl.addEventListener("click", function () {
+                equationEl.value = equationEl.value + '0';
+            });
+            p1El.addEventListener("click", function () {
+                equationEl.value = equationEl.value + '(';
+            });
+            p2El.addEventListener("click", function () {
+                equationEl.value = equationEl.value + ')';
+            });
+            niEl.addEventListener("click", function () {
+                equationEl.value = equationEl.value + '9';
+            });
+            egEl.addEventListener("click", function () {
+                equationEl.value = equationEl.value + '8';
+            });
+            diEl.addEventListener("click", function () {
+                equationEl.value = equationEl.value + '/';
+            });
+            muEl.addEventListener("click", function () {
+                equationEl.value = equationEl.value + '*';
+            });
+            seEl.addEventListener("click", function () {
+                equationEl.value = equationEl.value + '7';
+            });
+            sxEl.addEventListener("click", function () {
+                equationEl.value = equationEl.value + '6';
+            });
+            fvEl.addEventListener("click", function () {
+                equationEl.value = equationEl.value + '5';
+            });
+            foEl.addEventListener("click", function () {
+                equationEl.value = equationEl.value + '4';
+            });
+            minEl.addEventListener("click", function () {
+                equationEl.value = equationEl.value + '-';
+            });
+            puEl.addEventListener("click", function () {
+                equationEl.value = equationEl.value + '+';
+            });
+            thEl.addEventListener("click", function () {
+                equationEl.value = equationEl.value + '3';
+            });
+            twEl.addEventListener("click", function () {
+                equationEl.value = equationEl.value + '2';
+            });
+            onEl.addEventListener("click", function () {
+                equationEl.value = equationEl.value + '1';
+            });
+                
+
+            
+            equationEl.addEventListener("input", function () {
+                var equation = equationEl.value;
+                var notAllowedRegExp = /[^0-9+\-*\/()]/;
+                if (notAllowedRegExp.test(equation)) {
+                    answerEl.textContent = "Invalid symbol";
+                } else {
+                    try {
+                        answerEl.textContent = eval(equation);
+                    } catch (e) {
+                        answerEl.textContent = "error";
+                    }
+                }
+            });
+            function log(answer){
+                console.log(answer)
+            }
+        </script>
 </html>
