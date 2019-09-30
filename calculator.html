@@ -52,6 +52,8 @@
             </tr>
             <tr>
                 <td id="z"><button>0</button></td>
+                <td id="peri"><button>.</button></td>
+                <td id="space"><button><-</button></td>
             </tr>
         </table>
     </body>
@@ -72,60 +74,11 @@
             var thEl = document.getElementById("th")
             var twEl = document.getElementById("tw")
             var onEl = document.getElementById("on")
-            
+            var doEl = document.getElementById("peri")
             var answerEl = document.getElementById("answer");
             var equationEl = document.getElementById("equation");
             
-            zEl.addEventListener("click", function () {
-                equationEl.value += '0';
-            });
-            p1El.addEventListener("click", function () {
-                equationEl.value += '(';
-            });
-            p2El.addEventListener("click", function () {
-                equationEl.value += ')';
-            });
-            niEl.addEventListener("click", function () {
-                equationEl.value += '9';
-            });
-            egEl.addEventListener("click", function () {
-                equationEl.value += '8';
-            });
-            diEl.addEventListener("click", function () {
-                equationEl.value += '/';
-            });
-            muEl.addEventListener("click", function () {
-                equationEl.value += '*';
-            });
-            seEl.addEventListener("click", function () {
-                equationEl.value += '7';
-            });
-            sxEl.addEventListener("click", function () {
-                equationEl.value += '6';
-            });
-            fvEl.addEventListener("click", function () {
-                equationEl.value += '5';
-            });
-            foEl.addEventListener("click", function () {
-                equationEl.value += '4';
-            });
-            minEl.addEventListener("click", function () {
-                equationEl.value += '-';
-            });
-            puEl.addEventListener("click", function () {
-                equationEl.value += '+';
-            });
-            thEl.addEventListener("click", function () {
-                equationEl.value += '3';
-            });
-            twEl.addEventListener("click", function () {
-                equationEl.value += '2';
-            });
-            onEl.addEventListener("click", function () {
-                equationEl.value += '1';
-            });
-            
-            equationEl.addEventListener("input", function () {
+            function calc() {
                 var equation = equationEl.value;
                 var notAllowedRegExp = /[^0-9+\-*\/()]/;
                 if (notAllowedRegExp.test(equation)) {
@@ -137,9 +90,75 @@
                         answerEl.textContent = "error";
                     }
                 }
-            });
-            function log(answer){
-                console.log(answer)
             }
+            
+            zEl.addEventListener("click", function () {
+                equationEl.value += '0';
+                calc();
+            });
+            p1El.addEventListener("click", function () {
+                equationEl.value += '(';
+                calc();
+            });
+            p2El.addEventListener("click", function () {
+                equationEl.value += ')';
+                calc();
+            });
+            niEl.addEventListener("click", function () {
+                equationEl.value += '9';
+            calc();
+            });
+            egEl.addEventListener("click", function () {
+                equationEl.value += '8';
+                calc();
+            });
+            diEl.addEventListener("click", function () {
+                equationEl.value += '/';
+                calc();
+            });
+            muEl.addEventListener("click", function () {
+                equationEl.value += '*'; 
+            calc();
+            });
+            seEl.addEventListener("click", function () {
+                equationEl.value += '7'; 
+            calc();
+            });
+            sxEl.addEventListener("click", function () {
+                equationEl.value += '6'; 
+            calc();
+            });
+            fvEl.addEventListener("click", function () {
+                equationEl.value += '5';
+            calc();
+            });
+            foEl.addEventListener("click", function () {
+                equationEl.value += '4'; 
+            calc();
+            });
+            minEl.addEventListener("click", function () {
+                equationEl.value += '-'; 
+            calc();
+            });
+            puEl.addEventListener("click", function () {
+                equationEl.value += '+'; 
+            calc();
+            });
+            thEl.addEventListener("click", function () {
+                equationEl.value += '3'; 
+            calc();
+            });
+            twEl.addEventListener("click", function () {
+                equationEl.value += '2'; 
+            calc();
+            });
+            onEl.addEventListener("click", function () {
+                equationEl.value += '1'; 
+            calc();
+            });
+            doEl.addEventListener("click", function () {
+                equationEl.value += '.'; 
+            calc();
+            });
         </script>
 </html>
