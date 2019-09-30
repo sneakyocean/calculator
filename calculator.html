@@ -80,7 +80,7 @@
             
             function calc() {
                 var equation = equationEl.value;
-                var notAllowedRegExp = /[^0-9+\-*\/()]/;
+                var notAllowedRegExp = /[^0-9+.\-*\/()]/;
                 if (notAllowedRegExp.test(equation)) {
                     answerEl.textContent = "Invalid symbol";
                 } else {
