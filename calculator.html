@@ -79,7 +79,7 @@
             var delEl = document.getElementById("space")
             var answerEl = document.getElementById("answer");
             var equationEl = document.getElementById("equation");
-            var amount = equationEl.value;
+            var dhelp = [];
                 
             function calc() {
                 var equation = equationEl.value;
@@ -97,58 +97,72 @@
             
             zEl.addEventListener("click", function () {
                 equationEl.value += '0';
+                dhelp = [0]
                 calc();
             });
             p1El.addEventListener("click", function () {
                 equationEl.value += '(';
+                dhelp = [(]
                 calc();
             });
             p2El.addEventListener("click", function () {
                 equationEl.value += ')';
+                dhelp = [)]
                 calc();
             });
             niEl.addEventListener("click", function () {
                 equationEl.value += '9';
+                dhelp = [9]
             calc();
             });
             egEl.addEventListener("click", function () {
                 equationEl.value += '8';
+                dhelp = [8]
                 calc();
             });
             diEl.addEventListener("click", function () {
                 equationEl.value += '/';
+                dhelp = ['/']
                 calc();
             });
             muEl.addEventListener("click", function () {
-                equationEl.value += '*'; 
+                equationEl.value += '*';
+                dhelp = ['*']
             calc();
             });
             seEl.addEventListener("click", function () {
-                equationEl.value += '7'; 
+                equationEl.value += '7';
+                dhelp = [7]
             calc();
             });
             sxEl.addEventListener("click", function () {
-                equationEl.value += '6'; 
+                equationEl.value += '6';
+                dhelp = [6]
             calc();
             });
             fvEl.addEventListener("click", function () {
                 equationEl.value += '5';
+                dhelp = [5]
             calc();
             });
             foEl.addEventListener("click", function () {
-                equationEl.value += '4'; 
+                equationEl.value += '4';
+                dhelp = [4]
             calc();
             });
             minEl.addEventListener("click", function () {
-                equationEl.value += '-'; 
+                equationEl.value += '-';
+                dhelp = ['-']
             calc();
             });
             puEl.addEventListener("click", function () {
-                equationEl.value += '+'; 
+                equationEl.value += '+';
+                dhelp = ['+']
             calc();
             });
             thEl.addEventListener("click", function () {
-                equationEl.value += '3'; 
+                equationEl.value += '3';
+                dhelp = [3]
             calc();
             });
             twEl.addEventListener("click", function () {
@@ -156,15 +170,17 @@
             calc();
             });
             onEl.addEventListener("click", function () {
-                equationEl.value += '1'; 
+                equationEl.value += '1';
+                dhelp = [1]
             calc();
             });
             doEl.addEventListener("click", function () {
-                equationEl.value += '.'; 
+                equationEl.value += '.';
+                dhelp = [.]
             calc();
             });
             delEl.addEventListener("click", function () {
-                equationEl.value += -10; 
+                equationEl.value = dhelp.pop(); 
             calc();
             });
         </script>
