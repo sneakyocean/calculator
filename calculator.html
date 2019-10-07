@@ -53,11 +53,12 @@
             <tr>
                 <td id="z"><button>0</button></td>
                 <td id="peri"><button>.</button></td>
-                <td id="space"><button><-</button></td>
+                <td id="space"><button>Delete</button></td>
             </tr>
         </table>
     </body>
         <script type="text/javascript">
+            
             var zEl = document.getElementById("z")
             var p1El = document.getElementById("p1")
             var p2El = document.getElementById("p2")
@@ -75,9 +76,11 @@
             var twEl = document.getElementById("tw")
             var onEl = document.getElementById("on")
             var doEl = document.getElementById("peri")
+            var delEl = document.getElementById("space")
             var answerEl = document.getElementById("answer");
             var equationEl = document.getElementById("equation");
-            
+            var amount = equationEl.value;
+                
             function calc() {
                 var equation = equationEl.value;
                 var notAllowedRegExp = /[^0-9+.\-*\/()]/;
@@ -158,6 +161,10 @@
             });
             doEl.addEventListener("click", function () {
                 equationEl.value += '.'; 
+            calc();
+            });
+            delEl.addEventListener("click", function () {
+                equationEl.value += -10; 
             calc();
             });
         </script>
