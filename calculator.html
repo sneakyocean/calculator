@@ -180,7 +180,10 @@
             calc();
             });
             delEl.addEventListener("click", function () {
-                equationEl.value = dhelp.pop(); 
+                equationEl.value = dhelp.pop();
+                if dhelp = [''] {
+                equationEl.value = '';
+                }
             calc();
             });
         </script>
