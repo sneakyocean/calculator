@@ -79,7 +79,6 @@
             var delEl = document.getElementById("space")
             var answerEl = document.getElementById("answer");
             var equationEl = document.getElementById("equation");
-            var dhelp = [];
                 
             function calc() {
                 var equation = equationEl.value;
@@ -122,47 +121,38 @@
             });
             diEl.addEventListener("click", function () {
                 equationEl.value += '/';
-                dhelp = ['/']
                 calc();
             });
             muEl.addEventListener("click", function () {
                 equationEl.value += '*';
-                dhelp = ['*']
             calc();
             });
             seEl.addEventListener("click", function () {
                 equationEl.value += '7';
-                dhelp = [7]
             calc();
             });
             sxEl.addEventListener("click", function () {
                 equationEl.value += '6';
-                dhelp = [6]
             calc();
             });
             fvEl.addEventListener("click", function () {
                 equationEl.value += '5';
-                dhelp = [5]
             calc();
             });
             foEl.addEventListener("click", function () {
                 equationEl.value += '4';
-                dhelp = [4]
             calc();
             });
             minEl.addEventListener("click", function () {
                 equationEl.value += '-';
-                dhelp = ['-']
             calc();
             });
             puEl.addEventListener("click", function () {
                 equationEl.value += '+';
-                dhelp = ['+']
             calc();
             });
             thEl.addEventListener("click", function () {
                 equationEl.value += '3';
-                dhelp = [3]
             calc();
             });
             twEl.addEventListener("click", function () {
@@ -171,19 +161,14 @@
             });
             onEl.addEventListener("click", function () {
                 equationEl.value += '1';
-                dhelp = [1]
             calc();
             });
             doEl.addEventListener("click", function () {
                 equationEl.value += '.';
-                dhelp = ['.']
             calc();
             });
             delEl.addEventListener("click", function () {
-                equationEl.value = dhelp.pop();
-                if dhelp = [''] {
-                equationEl.value = '';
-                }
+                equationEl.value = .slice(0,-1);
             calc();
             });
         </script>
