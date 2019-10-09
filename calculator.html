@@ -96,27 +96,22 @@
             
             zEl.addEventListener("click", function () {
                 equationEl.value += '0';
-                dhelp = [0]
                 calc();
             });
             p1El.addEventListener("click", function () {
                 equationEl.value += '(';
-                dhelp = ['(']
                 calc();
             });
             p2El.addEventListener("click", function () {
                 equationEl.value += ')';
-                dhelp = [')']
                 calc();
             });
             niEl.addEventListener("click", function () {
                 equationEl.value += '9';
-                dhelp = [9]
             calc();
             });
             egEl.addEventListener("click", function () {
                 equationEl.value += '8';
-                dhelp = [8]
                 calc();
             });
             diEl.addEventListener("click", function () {
@@ -168,7 +163,7 @@
             calc();
             });
             delEl.addEventListener("click", function () {
-                equationEl.value = slice(0,-1);
+                equationEl.value = equationEl.value.slice(0,-1);
             calc();
             });
         </script>
