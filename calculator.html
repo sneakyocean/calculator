@@ -166,6 +166,22 @@
             delEl.addEventListener("click", function () {
                 equationEl.value = equationEl.value.slice(0,-1);
             calc();
+            equationEl.addEventListener("input", function () {
+			        var equation = 
+				var notAllowedRegExp = /[^0-9+\-*\/()]/;
+				if (notAllowedRegExp.test(equation)) {
+					answerEl.textContent = "Invalid symbol";
+				} else {
+					try {
+						answerEl.textContent = eval(equation);
+					} catch (e) {
+						answerEl.textContent = "error";
+					}
+				}
+			});
+			function log(answer){
+				console.log(answer)
+			}
             });
         </script>
 </html>
